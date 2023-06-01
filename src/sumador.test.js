@@ -16,4 +16,8 @@ describe("Numero Monedas", () => {
   it("deberia devolver una moneda de 5 y una de 1 para el monto 6", () => {
     expect(numeroMonedas(6)).toEqual([5, 1]);
   });
+
+  it("deberia devolver las monedas para montos mayores a 5", () => {
+    expect(numeroMonedas(13)).toEqual([5,5,2,1]);
+  });
 });

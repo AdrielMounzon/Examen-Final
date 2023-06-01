@@ -1,13 +1,20 @@
 function numeroMonedas(monto) {
     
+    let cortes = [5, 2, 1, 0.5, 0.2]
     let lista = []
-    if(monto>5)
+    let posicion = 0
+    while(monto>0)
     {
-        lista.push(5);
-        monto-=5;
+        if(cortes[posicion]>monto)
+        {
+            lista.push(cortes[posicion])
+            monto-=cortes[posicion]
+        }
+        else
+        {
+            posicion+=1
+        }
     }
-    lista.push(monto);
-    
   }
   
   export default numeroMonedas
