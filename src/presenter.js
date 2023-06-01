@@ -1,4 +1,4 @@
-import calcularCambio from "./sumador";
+import calcularCambio from "./calculadora";
 
 const montoVenta = document.querySelector("#montoVenta");
 const efectivoPagado = document.querySelector("#efectivo");
