@@ -1,7 +1,7 @@
-import sumar from "./sumador.js";
+import numeroMonedas from "./numeroMonedas";
 
-describe("Sumar", () => {
-  it("deberia sumar dos numeros", () => {
-    expect(sumar(3, 2)).toEqual(5);
+describe("Numero Monedas", () => {
+  it("deberia devolver una lista vacía para el monto 0", () => {
+    expect(numeroMonedas(0)).toEqual([]);
   });
 });
