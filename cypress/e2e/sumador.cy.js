@@ -1,9 +1,9 @@
-describe("Sumador", () => {
-  it("Shows the amount of the addition to the user", () => {
+describe("Calculadora de cambios", () => {
+  it("Muestra el cambio correspondiente a un monto de venta y el efectivo", () => {
     cy.visit("/");
-    cy.get("#primer-numero").type(4);
-    cy.get("#segundo-numero").type(5);
-    cy.get("#sumar-button").click();
-    cy.get("#resultado-div").should("contain", "9");
+    cy.get("#montoVenta").type(4);
+    cy.get("#efectivo").type(5);
+    cy.get("#calcularCambio").click();
+    cy.get("#cambio-div").should("contain", "1");
   });
 });

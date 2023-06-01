@@ -1,5 +1,6 @@
-function sumar(a, b) {
-  return a + b;
+function calcularCambio(montoVenta, efectivoPagado) {
+  const cambio = efectivoPagado-montoVenta;
+  return cambio;
 }
 
-export default sumar;
+export default calcularCambio;

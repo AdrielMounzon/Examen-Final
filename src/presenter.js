@@ -1,15 +1,15 @@
-import sumar from "./sumador";
+import calcularCambio from "./sumador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const montoVenta = document.querySelector("#montoVenta");
+const efectivoPagado = document.querySelector("#efectivo");
+const form = document.querySelector("#calcularCambio-form");
+const div = document.querySelector("#cambio-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const monto = Number.parseInt(montoVenta.value);
+  const efectivo = Number.parseInt(efectivoPagado.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + calcularCambio(monto, efectivo) + "</p>";
 });
