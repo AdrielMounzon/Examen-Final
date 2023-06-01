@@ -3,9 +3,9 @@
     <h1>Calculadora de cambios</h1>
     <form id="calcularCambio-form">
       <label for="montoVenta">Monto Venta:</label>
-      <input type="number" id="montoVenta" />
+      <input type="number" id="montoVenta" required min="0"/>
       <label for="efectivo">Efectivo:</label>
-      <input type="number" id="efectivo" />
+      <input type="number" id="efectivo" required min ="0"/>
       <input type="submit" value="Cambio" id="calcularCambio" />
     </form>
     <div id="cambio-div"></div>
