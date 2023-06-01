@@ -5,7 +5,7 @@ function numeroMonedas(monto) {
     let posicion = 0
     while(monto>0)
     {
-        if(cortes[posicion]>monto)
+        if(cortes[posicion]<monto)
         {
             lista.push(cortes[posicion])
             monto-=cortes[posicion]
