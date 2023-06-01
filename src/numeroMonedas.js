@@ -5,10 +5,11 @@ function numeroMonedas(monto) {
     let posicion = 0
     while(monto>0)
     {
-        if(cortes[posicion]<monto)
+        let montoParcial = cortes[posicion]
+        if(montoParcial<monto)
         {
-            lista.push(cortes[posicion])
-            monto-=cortes[posicion]
+            lista.push(montoParcial)
+            monto-=montoParcial
         }
         else
         {
