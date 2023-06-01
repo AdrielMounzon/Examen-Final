@@ -1,11 +1,14 @@
 function numeroMonedas(monto) {
+    
     let lista = []
-    if(monto>0)
+    if(monto>5)
     {
-        lista.push(monto);
+        lista.push(5);
+        monto-=5;
     }
-    return lista;
+    lista.push(monto);
+    
   }
   
-  export default numeroMonedas;
+  export default numeroMonedas
   
