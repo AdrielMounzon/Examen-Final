@@ -7,9 +7,15 @@ const div = document.querySelector("#cambio-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  if(montoVenta.value=="" || efectivoPagado.value=="")
+  {
+    div.innerHTML = "<p>" + "Error: Se deben introucir valores a ambos campos" + "</p>";
+  }
+  else
+  {
+    const monto = Number.parseInt(montoVenta.value);
+    const efectivo = Number.parseInt(efectivoPagado.value);
 
-  const monto = Number.parseInt(montoVenta.value);
-  const efectivo = Number.parseInt(efectivoPagado.value);
-
-  div.innerHTML = "<p>" + calcularCambio(monto, efectivo) + "</p>";
+    div.innerHTML = "<p>" + calcularCambio(monto, efectivo) + "</p>";
+  }
 });

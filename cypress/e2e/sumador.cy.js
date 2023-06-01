@@ -6,4 +6,10 @@ describe("Calculadora de cambios", () => {
     cy.get("#calcularCambio").click();
     cy.get("#cambio-div").should("contain", "1");
   });
+
+  it("Muestra un error si no se ingresa alguno de los valores", () => {
+    cy.visit("/");
+    cy.get("#calcularCambio").click();
+    cy.get("#cambio-div").should("contain", "Error: Se deben introucir valores a ambos campos");
+  });
 });
